@@ -24,5 +24,4 @@ def clear_kodi_data():
     else:
         xbmcgui.Dialog().ok("Clear Kodi Data", "Action canceled.")
 
-if __name__ == "__main__":
-    clear_kodi_data()
+if __name__ == 
