@@ -5,8 +5,8 @@ import xbmcgui
 
 def clear_kodi_data():
     # Get Kodi's userdata path
-    kodi_data_path = xbmc.translatePath("special://userdata/").replace("\\", "/")
-    
+    from xbmcvfs import translatePath
+kodi_data_path = translatePath("special://userdata/")
     # Confirm action with the user
     dialog = xbmcgui.Dialog()
     if dialog.yesno("Clear Kodi Data", f"This will erase all data in:\n{kodi_data_path}\nDo you want to continue?"):
