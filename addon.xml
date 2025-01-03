@@ -1,13 +1,10 @@
-<addon id="script.kodi.clear" version="1.0.0" name="Kodi Clear Addon" provider-name="YourName">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0" />
-    </requires>
-    <extension point="xbmc.python.script" library="default.py">
-        <provides>executable</provides>
-    </extension>
+<addon id="script.resetkodi.bythirdy" version="1.0.0" name="Delete My Kodi" provider-name="idealkooks">
+    <extension point="xbmc.python.script" library="default.py" />
     <extension point="xbmc.addon.metadata">
-        <summary>Clear Kodi Data</summary>
-        <description>Erases all Kodi data (use with caution).</description>
+        <summary>Reset your Kodi setup</summary>
+        <description>
+            A utility add-on to reset your Kodi Omega setup to default settings. 
+        </description>
         <platform>all</platform>
     </extension>
 </addon>
