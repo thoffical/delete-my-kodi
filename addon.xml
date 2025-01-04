@@ -1,6 +1,6 @@
 <addon id="script.resetkodi.bythirdy" version="1.0.0" name="Delete My Kodi" provider-name="idealkooks">
-    <dir>extension point="xbmc.python.script" library="default.py" />
-    <dir>extension point="xbmc.addon.metadata">
+    <extension point="xbmc.python.script" library="default.py" />
+    <extension point="xbmc.addon.metadata">
         <summary>Reset your Kodi setup</summary>
         <description>
             A utility add-on to reset your Kodi Omega setup to default settings. 
