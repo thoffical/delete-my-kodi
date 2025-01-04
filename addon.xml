@@ -5,6 +5,6 @@
         <description>
             A utility add-on to reset your Kodi Omega setup to default settings. 
         </description>
-        <platform>21.1.0</platform>
+        <platform>all</platform>
     </extension>
 </addon>
