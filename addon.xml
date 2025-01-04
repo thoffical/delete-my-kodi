@@ -1,10 +1,27 @@
-<addon id="script.resetkodi.bythirdy" version="21.1.0" name="Delete My Kodi" provider-name="idealkooks">
-    <extension point="xbmc.python.script" library="default.py" />
+<addon id="script.resetkodi.bythirdy" 
+       version="21.1.0" 
+       name="Delete My Kodi" 
+       provider-name="idealkooks">
+       
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    
     <extension point="xbmc.addon.metadata">
-        <summary>Reset your Kodi setup</summary>
-        <description>
-            A utility add-on to reset your Kodi Omega setup to default settings. 
+        <summary lang="en">Reset your Kodi setup</summary>
+        <description lang="en">
+            A utility add-on to reset your Kodi Omega setup to default settings.
         </description>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
         <platform>all</platform>
+        <license>MIT</license>
+        <source>https://github.com/thoffical/delete-my-kodi</source>
     </extension>
 </addon>
