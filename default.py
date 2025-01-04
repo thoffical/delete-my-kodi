@@ -3,7 +3,6 @@ import shutil
 import xbmc
 import xbmcgui
 from xbmcvfs import translatePath
-import platform
 
 def clear_kodi_data():
     try:
@@ -34,7 +33,11 @@ def clear_kodi_data():
                 except Exception as e:
                     xbmc.log(f"Failed to delete {item_path}: {str(e)}", level=xbmc.LOGERROR)
 
-            xbmcgui.Dialog().ok("Success", "Kodi data has been erased. Please restart Kodi.")
+            xbmcgui.Dialog().ok("Success", "Kodi data has been erased. Kodi will now restart.")
+            
+            # Force restart Kodi after the procedure
+            xbmc.executebuiltin('Restart')  # Restart Kodi
+
         else:
             xbmcgui.Dialog().ok("Canceled", "No changes were made.")
     except Exception as e:
@@ -42,11 +45,4 @@ def clear_kodi_data():
         xbmc.log(f"Critical Error: {str(e)}", level=xbmc.LOGERROR)
 
 if __name__ == "__main__":
-    # Check for the platform and modify behavior if necessary
-    system = platform.system()
-    if system in ['Darwin', 'Windows', 'Linux', 'Android']:
-        clear_kodi_data()
-    elif system == 'iOS':
-        xbmcgui.Dialog().ok("Error", "Clearing Kodi data is not supported on iOS.")
-    else:
-        xbmcgui.Dialog().ok("Error", f"Unsupported platform: {system}")
+    clear_kodi_data()
