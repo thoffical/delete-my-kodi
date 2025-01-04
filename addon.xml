@@ -1,4 +1,4 @@
-<addon id="script.resetkodi.bythirdy" version="1.0.0" name="Delete My Kodi" provider-name="idealkooks">
+<addon id="script.resetkodi.bythirdy" version="21.1.0" name="Delete My Kodi" provider-name="idealkooks">
     <extension point="xbmc.python.script" library="default.py" />
     <extension point="xbmc.addon.metadata">
         <summary>Reset your Kodi setup</summary>
